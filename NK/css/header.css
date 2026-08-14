@@ -1,0 +1,190 @@
+/* Shared site header — based on the Services page design. */
+:root {
+    --font-ui: "Segoe UI", Arial, Helvetica, sans-serif;
+    --orange: #ff6a00;
+}
+
+header,
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    background: rgba(8, 8, 8, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid #202020;
+    font-family: var(--font-ui);
+}
+
+.logo,
+header .logo,
+.site-header .logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-ui);
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.logo span,
+header .logo span,
+.site-header .logo span {
+    color: var(--orange);
+}
+
+header nav,
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a,
+.site-header nav a {
+    position: relative;
+    color: #777777;
+    text-decoration: none;
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav a::after,
+.site-header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--orange);
+    transition: width 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active,
+.site-header nav a:hover,
+.site-header nav a.active {
+    color: #ffffff;
+}
+
+header nav a:hover::after,
+header nav a.active::after,
+.site-header nav a:hover::after,
+.site-header nav a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    header,
+    .site-header {
+        min-height: 72px;
+        padding: 0 24px;
+    }
+
+    .logo,
+    header .logo,
+    .site-header .logo {
+        font-size: 26px;
+    }
+
+    .menu-toggle {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-content: center;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background: transparent;
+        border: 1px solid #303030;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 21px;
+        height: 2px;
+        display: block;
+        background: currentColor;
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    header nav,
+    .site-header nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 24px 18px;
+        background: rgba(8, 8, 8, .98);
+        border-bottom: 1px solid #202020;
+        box-shadow: 0 16px 28px rgba(0, 0, 0, .35);
+    }
+
+    header nav.is-open,
+    .site-header nav.is-open {
+        display: flex;
+    }
+
+    header nav a,
+    .site-header nav a {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 0 4px;
+        font-size: 13px;
+    }
+
+    header nav a::after,
+    .site-header nav a::after {
+        right: auto;
+        bottom: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    header,
+    .site-header {
+        min-height: 64px;
+        padding: 0 16px;
+    }
+
+    .logo,
+    header .logo,
+    .site-header .logo {
+        font-size: 23px;
+    }
+
+    header nav,
+    .site-header nav {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}

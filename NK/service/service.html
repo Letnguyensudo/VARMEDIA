@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VAR Studio — Services</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+    <!-- Service CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/service.css"
+    >
+    <link rel="stylesheet" href="../css/header.css">
+    
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <a class="logo" href="../index.html">
+        VAR<span>STUDIO</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+
+    <nav>
+
+        <a href="../index.html">
+            HOME
+        </a>
+
+        <a href="../characters/characters.html">
+            CHARACTERS
+        </a>
+
+        <a href="../portfolio.html">
+            PORTFOLIO
+        </a>
+
+        <a
+            href="service.html"
+            class="active"
+        >
+            SERVICES
+        </a>
+
+        <a href="../contact.html">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-small">
+        VAR STUDIO
+    </div>
+
+
+    <h1>
+        SERVICES
+    </h1>
+
+
+    <p>
+        Choose a service that fits your idea
+        and book a session with VAR Studio.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    class="services"
+    id="services"
+>
+
+    <div class="section-title">
+
+        <span>
+            WHAT WE DO
+        </span>
+
+
+        <h2>
+            Our Services
+        </h2>
+
+    </div>
+
+
+
+    <div class="service-grid">
+
+
+        <!-- Photography -->
+
+        <div
+            class="service-card"
+            onclick="selectService('Photography')"
+        >
+
+            <div class="service-number">
+                01
+            </div>
+
+
+            <h3>
+                Photography
+            </h3>
+
+
+            <p>
+                Portrait, product and event
+                photography with creative
+                visual direction.
+            </p>
+
+        </div>
+
+
+
+        <!-- Video -->
+
+        <div
+            class="service-card"
+            onclick="selectService('Video Production')"
+        >
+
+            <div class="service-number">
+                02
+            </div>
+
+
+            <h3>
+                Video Production
+            </h3>
+
+
+            <p>
+                Cinematic videos and creative
+                storytelling for your ideas
+                and projects.
+            </p>
+
+        </div>
+
+
+
+        <!-- Design -->
+
+        <div
+            class="service-card"
+            onclick="selectService('Digital Design')"
+        >
+
+            <div class="service-number">
+                03
+            </div>
+
+
+            <h3>
+                Digital Design
+            </h3>
+
+
+            <p>
+                Branding, posters, graphics
+                and visual design for digital
+                experiences.
+            </p>
+
+        </div>
+
+
+
+        <!-- 3D -->
+
+        <div
+            class="service-card"
+            onclick="selectService('3D Creation')"
+        >
+
+            <div class="service-number">
+                04
+            </div>
+
+
+            <h3>
+                3D Creation
+            </h3>
+
+
+            <p>
+                3D models, environments and
+                digital creations for creative
+                projects.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOOKING
+===================================================== -->
+
+<section
+    class="booking-section"
+    id="booking"
+>
+
+    <div class="booking-container">
+
+
+        <!-- TITLE -->
+
+        <div class="booking-title">
+
+            <span>
+                RESERVATION
+            </span>
+
+
+            <h2>
+                Book a Session
+            </h2>
+
+
+            <p>
+                Select a date and time
+                that works best for you.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DATE
+        ================================================== -->
+
+        <div class="booking-step">
+
+            <h3>
+                01 — Select a date
+            </h3>
+
+
+            <div class="date-box">
+
+                <span class="date-icon">
+                    📅
+                </span>
+
+
+                <input
+                    type="date"
+                    id="bookingDate"
+                    name="date"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SESSION
+        ================================================== -->
+
+        <div class="booking-step">
+
+            <h3>
+                02 — Select a session
+            </h3>
+
+
+            <div class="session-tabs">
+
+                <button
+                    type="button"
+                    class="session-btn active"
+                    data-session="morning"
+                >
+                    Morning
+                </button>
+
+
+                <button
+                    type="button"
+                    class="session-btn"
+                    data-session="afternoon"
+                >
+                    Afternoon
+                </button>
+
+
+                <button
+                    type="button"
+                    class="session-btn"
+                    data-session="evening"
+                >
+                    Evening
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TIME
+        ================================================== -->
+
+        <div class="booking-step">
+
+            <h3>
+                03 — Select a time
+            </h3>
+
+
+            <div
+                class="time-grid"
+                id="timeGrid"
+            ></div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORMSUBMIT
+        ================================================== -->
+
+        <form
+            id="bookingForm"
+
+            action="https://formsubmit.co/varmediastudio@gmail.com"
+
+            method="POST"
+
+            class="form-box"
+        >
+
+
+            <!-- FormSubmit settings -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New VAR Studio Booking"
+            >
+
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+
+
+            <!-- SERVICE -->
+
+            <div class="input-group">
+
+                <label for="service">
+                    Service
+                </label>
+
+
+                <select
+                    id="service"
+                    name="Service"
+                    required
+                >
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+
+                    <option value="Photography">
+                        Photography
+                    </option>
+
+
+                    <option value="Video Production">
+                        Video Production
+                    </option>
+
+
+                    <option value="Digital Design">
+                        Digital Design
+                    </option>
+
+
+                    <option value="3D Creation">
+                        3D Creation
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    placeholder="Your name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="input-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="Phone"
+                    placeholder="Your phone number"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- NOTE -->
+
+            <div class="input-group">
+
+                <label for="note">
+                    Note
+                </label>
+
+
+                <textarea
+                    id="note"
+                    name="Note"
+                    placeholder="Tell us anything we should know..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Hidden booking information -->
+
+            <input
+                type="hidden"
+                id="sessionInput"
+                name="Session"
+            >
+
+
+            <input
+                type="hidden"
+                id="timeInput"
+                name="Time"
+            >
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+                id="submitButton"
+            >
+                Confirm Booking
+            </button>
+
+
+            <div
+                id="bookingStatus"
+            ></div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h3>
+        VAR<span>.</span>
+    </h3>
+
+
+    <p>
+        Creative Studio —
+        Photography, Design & Digital Experiences
+    </p>
+
+</footer>
+
+
+
+<!-- Service JavaScript -->
+
+<script src="../js/header.js"></script>
+<script src="../js/service.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+:root { --font-ui: "Segoe UI", Arial, Helvetica, sans-serif; --orange: #ff6a00; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #fff; background: #080808; font-family: var(--font-ui); }
+.contact-page { min-height: calc(100svh - 80px); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 10vw, 150px); align-items: center; padding: clamp(70px, 10vw, 130px) 10%; }
+.contact-intro p { margin: 0 0 18px; color: var(--orange); font-size: 12px; font-weight: 700; letter-spacing: 3px; }
+.contact-intro h1 { margin: 0; font-size: clamp(48px, 6vw, 86px); line-height: .94; letter-spacing: -4px; }
+.contact-intro span { display: block; max-width: 390px; margin-top: 25px; color: #aaa; line-height: 1.7; }
+.contact-form { display: flex; flex-direction: column; gap: 18px; padding: clamp(26px, 4vw, 46px); background: #111; border: 1px solid #292929; border-radius: 20px; }
+.contact-form label { display: grid; gap: 8px; color: #ddd; font-size: 14px; font-weight: 600; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px; color: #fff; background: #080808; border: 1px solid #333; border-radius: 10px; font: inherit; }
+.contact-form textarea { min-height: 140px; resize: vertical; }
+.contact-form button { min-height: 52px; color: #fff; background: var(--orange); border: 0; border-radius: 10px; font: inherit; font-weight: 800; cursor: pointer; }
+#form-status { min-height: 20px; margin: 0; color: var(--orange); }
+footer { padding: 30px; color: #aaa; text-align: center; background: #000; }
+@media (max-width: 1050px) { .contact-page { grid-template-columns: 1fr; gap: 42px; padding: 80px 10%; } }
+@media (max-width: 700px) { .contact-page { padding: 62px 16px; } .contact-intro h1 { font-size: clamp(42px, 14vw, 62px); } }

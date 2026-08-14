@@ -1,0 +1,111 @@
+:root {
+    --font-ui: "Segoe UI", Arial, Helvetica, sans-serif;
+    --orange: #ff6a00;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    color: #fff;
+    background: #080808;
+    font-family: var(--font-ui);
+}
+
+.portfolio-hero {
+    padding: clamp(80px, 12vw, 150px) 10% 70px;
+    background: radial-gradient(circle at 70% 10%, rgba(255, 106, 0, .18), transparent 32%), #080808;
+}
+
+.eyebrow {
+    margin: 0 0 16px;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(54px, 9vw, 130px);
+    line-height: .9;
+    letter-spacing: -5px;
+}
+
+.intro {
+    max-width: 500px;
+    margin: 24px 0 0;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 10% 100px;
+}
+
+.portfolio-grid article {
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #151515;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    display: block;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.portfolio-grid article::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, rgba(0, 0, 0, .75));
+}
+
+.portfolio-grid article:hover img { transform: scale(1.06); }
+
+.portfolio-grid span {
+    position: absolute;
+    z-index: 1;
+    right: 18px;
+    bottom: 17px;
+    left: 18px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+footer {
+    padding: 30px;
+    color: #aaa;
+    text-align: center;
+    background: #000;
+}
+
+@media (max-width: 1050px) {
+    .portfolio-hero { padding-right: 8%; padding-left: 8%; }
+    .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-right: 8%; padding-left: 8%; }
+}
+
+@media (max-width: 900px) {
+    .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+    .portfolio-hero { padding: 80px 7% 50px; }
+    .portfolio-grid { grid-template-columns: 1fr; gap: 16px; padding: 0 7% 70px; }
+    .portfolio-grid article { min-height: 300px; }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VAR STUDIO — Characters</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+    <link
+        rel="stylesheet"
+        href="../css/characters.css"
+    >
+    <link rel="stylesheet" href="../css/header.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     HEADER
+================================ -->
+
+<header class="site-header">
+
+    <a href="../index.html" class="logo">
+        VAR<span>STUDIO</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="characters.html" class="active">
+            Characters
+        </a>
+
+        <a href="../portfolio.html">
+            Portfolio
+        </a>
+
+        <a href="../service/service.html">
+            Services
+        </a>
+
+        <a href="../contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     CHARACTERS
+================================ -->
+
+<main class="characters-page">
+
+
+    <!-- TOP TEXT -->
+
+    <section class="characters-intro">
+
+        <div class="eyebrow">
+            VAR STUDIO / FEATURED FACES
+        </div>
+
+
+        <h1>
+            Meet the<br>
+            <span>visionaries.</span>
+        </h1>
+
+
+        <p>
+            Chọn một nhân vật để đưa họ vào khung hình chính
+            <br>
+            — hoặc kéo sang trái, phải để khám phá.
+        </p>
+
+    </section>
+
+
+
+    <!-- ==========================
+         CHARACTER SHOWCASE
+    =========================== -->
+
+    <section class="character-showcase">
+
+
+        <!-- LEFT ARROW -->
+
+        <button
+            class="slider-arrow arrow-left"
+            id="prevCharacter"
+            aria-label="Previous character"
+        >
+            ←
+        </button>
+
+
+
+        <!-- CARDS -->
+
+        <div
+            class="character-slider"
+            id="characterSlider"
+        >
+
+            <!-- JS sẽ tạo cards ở đây -->
+
+        </div>
+
+
+
+        <!-- RIGHT ARROW -->
+
+        <button
+            class="slider-arrow arrow-right"
+            id="nextCharacter"
+            aria-label="Next character"
+        >
+            →
+        </button>
+
+
+    </section>
+
+
+
+    <!-- ==========================
+         CHARACTER INFORMATION
+    =========================== -->
+
+    <section class="character-info">
+
+
+        <div class="character-counter">
+
+            <span id="currentNumber">
+                01
+            </span>
+
+            <span class="slash">
+                /
+            </span>
+
+            <span id="totalNumber">
+                05
+            </span>
+
+        </div>
+
+
+        <div class="character-role">
+            VISUAL DIRECTOR
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================
+         MOBILE SWIPE HINT
+    =========================== -->
+
+    <div class="swipe-hint">
+
+        ← DRAG TO EXPLORE →
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
+<script src="../js/header.js"></script>
+<script src="../js/characters.js"></script>
+
+
+</body>
+
+</html>

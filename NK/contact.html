@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR Studio — Contact</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">VAR<span>STUDIO</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="characters/characters.html">Characters</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service/service.html">Services</a>
+            <a href="contact.html" class="active" aria-current="page">Contact</a>
+        </nav>
+    </header>
+    <main class="contact-page">
+        <section class="contact-intro">
+            <p>VAR STUDIO / CONTACT</p>
+            <h1>Let's create<br>something memorable.</h1>
+            <span>Tell us about your project and we will get back to you soon.</span>
+        </section>
+        <form id="contact-form" action="https://formsubmit.co/letplaymum@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="New request from VAR Studio website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Your idea<textarea name="message" required></textarea></label>
+            <button type="submit">Send Request</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+    <footer>© 2026 VAR Studio</footer>
+    <script src="js/header.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
